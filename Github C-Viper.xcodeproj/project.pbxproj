@@ -30,6 +30,11 @@
 		2D8DAE0F23B89ACD0031F340 /* RepoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8DAE0E23B89ACD0031F340 /* RepoDetail.swift */; };
 		2D8DAE1223B8AFBA0031F340 /* RepoContributorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8DAE1023B8AFBA0031F340 /* RepoContributorTableViewCell.swift */; };
 		2D8DAE1323B8AFBA0031F340 /* RepoContributorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D8DAE1123B8AFBA0031F340 /* RepoContributorTableViewCell.xib */; };
+		2D8DAE1523B8B2990031F340 /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8DAE1423B8B2990031F340 /* FileService.swift */; };
+		2D8DAE1723B8F4430031F340 /* ContributorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8DAE1623B8F4430031F340 /* ContributorInteractor.swift */; };
+		2D8DAE1923B8F44E0031F340 /* ContributorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8DAE1823B8F44E0031F340 /* ContributorPresenter.swift */; };
+		2D8DAE1B23B8F45B0031F340 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8DAE1A23B8F45B0031F340 /* Contributor.swift */; };
+		2D8DAE2123B8F48F0031F340 /* ContributorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8DAE2023B8F48F0031F340 /* ContributorRouter.swift */; };
 		A43456637B0BA8A93022C904 /* Pods_Github_C_Viper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ECA285F5364FE777C4BB47F /* Pods_Github_C_Viper.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +64,11 @@
 		2D8DAE0E23B89ACD0031F340 /* RepoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetail.swift; sourceTree = "<group>"; };
 		2D8DAE1023B8AFBA0031F340 /* RepoContributorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoContributorTableViewCell.swift; sourceTree = "<group>"; };
 		2D8DAE1123B8AFBA0031F340 /* RepoContributorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoContributorTableViewCell.xib; sourceTree = "<group>"; };
+		2D8DAE1423B8B2990031F340 /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
+		2D8DAE1623B8F4430031F340 /* ContributorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorInteractor.swift; sourceTree = "<group>"; };
+		2D8DAE1823B8F44E0031F340 /* ContributorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorPresenter.swift; sourceTree = "<group>"; };
+		2D8DAE1A23B8F45B0031F340 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
+		2D8DAE2023B8F48F0031F340 /* ContributorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorRouter.swift; sourceTree = "<group>"; };
 		4B6CA800DBBDFAA6C8AD6544 /* Pods-Github C-Viper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github C-Viper.debug.xcconfig"; path = "Target Support Files/Pods-Github C-Viper/Pods-Github C-Viper.debug.xcconfig"; sourceTree = "<group>"; };
 		54B6C58E970EFCD3F44DA604 /* Pods-Github C-Viper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github C-Viper.release.xcconfig"; path = "Target Support Files/Pods-Github C-Viper/Pods-Github C-Viper.release.xcconfig"; sourceTree = "<group>"; };
 		7ECA285F5364FE777C4BB47F /* Pods_Github_C_Viper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Github_C_Viper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				2D8DADEB23B755AE0031F340 /* GithubRepo.swift */,
+				2D8DAE1423B8B2990031F340 /* FileService.swift */,
 			);
 			path = Moya;
 			sourceTree = "<group>";
@@ -186,8 +197,11 @@
 		2D8DAE0723B787710031F340 /* Contributor */ = {
 			isa = PBXGroup;
 			children = (
-				2D8DAE0323B7876C0031F340 /* ContributorViewController.swift */,
-				2D8DAE0423B7876C0031F340 /* ContributorViewController.xib */,
+				2D8DAE1C23B8F4610031F340 /* View */,
+				2D8DAE1D23B8F4680031F340 /* Interactor */,
+				2D8DAE1E23B8F4730031F340 /* Presenter */,
+				2D8DAE1F23B8F47C0031F340 /* Entity */,
+				2D8DAE2223B8F4910031F340 /* Router */,
 			);
 			path = Contributor;
 			sourceTree = "<group>";
@@ -211,6 +225,47 @@
 				2D8DAE1123B8AFBA0031F340 /* RepoContributorTableViewCell.xib */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		2D8DAE1C23B8F4610031F340 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D8DAE0323B7876C0031F340 /* ContributorViewController.swift */,
+				2D8DAE0423B7876C0031F340 /* ContributorViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D8DAE1D23B8F4680031F340 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2D8DAE1623B8F4430031F340 /* ContributorInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2D8DAE1E23B8F4730031F340 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2D8DAE1823B8F44E0031F340 /* ContributorPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2D8DAE1F23B8F47C0031F340 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2D8DAE1A23B8F45B0031F340 /* Contributor.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		2D8DAE2223B8F4910031F340 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2D8DAE2023B8F48F0031F340 /* ContributorRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		63A204838ACBFF901538D5A1 /* Pods */ = {
@@ -347,9 +402,13 @@
 				2D8DADEA23B753A00031F340 /* RepoInteractor.swift in Sources */,
 				2D8DADF423B76D650031F340 /* RepoItem.swift in Sources */,
 				2D8DAE1223B8AFBA0031F340 /* RepoContributorTableViewCell.swift in Sources */,
+				2D8DAE1723B8F4430031F340 /* ContributorInteractor.swift in Sources */,
+				2D8DAE2123B8F48F0031F340 /* ContributorRouter.swift in Sources */,
 				2D8DADF023B75B8F0031F340 /* RepoRouter.swift in Sources */,
+				2D8DAE1523B8B2990031F340 /* FileService.swift in Sources */,
 				2D8DAE0A23B898320031F340 /* RepoDetailViewController.swift in Sources */,
 				2D8DADE723B7536A0031F340 /* RepoPresenter.swift in Sources */,
+				2D8DAE1B23B8F45B0031F340 /* Contributor.swift in Sources */,
 				2D8DADD523B746130031F340 /* RepoListViewController.swift in Sources */,
 				2D8DAE0223B784E20031F340 /* ViewController.swift in Sources */,
 				2D8DADD123B746130031F340 /* AppDelegate.swift in Sources */,
@@ -357,6 +416,7 @@
 				2D8DADFB23B771300031F340 /* RepoItemTableViewCell.swift in Sources */,
 				2D8DADEC23B755AE0031F340 /* GithubRepo.swift in Sources */,
 				2D8DADD323B746130031F340 /* SceneDelegate.swift in Sources */,
+				2D8DAE1923B8F44E0031F340 /* ContributorPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

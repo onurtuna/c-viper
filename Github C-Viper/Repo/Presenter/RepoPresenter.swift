@@ -21,6 +21,11 @@ class RepoPresenter {
             interactor?.repoDetailFetched = repoDetailFetched
         }
     }
+    var ownerAvatarDownloaded: ((Data) -> Void)? {
+        didSet {
+            interactor?.imageDownloaded = ownerAvatarDownloaded
+        }
+    }
     
     func startFetchingRepos(page: Int) {
         interactor?.fetchRepos(page: page)
@@ -28,6 +33,10 @@ class RepoPresenter {
     
     func getDetail(of repoFullname: String) {
         interactor?.getDetail(of: repoFullname)
+    }
+    
+    func getOwnerAvatar(path: String) {
+        interactor?.downloadImage(path: path)
     }
     
 }

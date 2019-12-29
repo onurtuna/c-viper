@@ -10,6 +10,7 @@ import UIKit
 
 final class RepoDetailViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ownerAvatarImageView: UIImageView!
     @IBOutlet weak var ownerLoginLabel: UILabel!
     @IBOutlet weak var repoDescriptionLabel: UILabel!
@@ -34,14 +35,22 @@ final class RepoDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleLabel.text = repo?.name
+        presenter?.ownerAvatarDownloaded = { [unowned self] (response) in
+            guard let avatar = UIImage(data: response, scale: 1.0) else {
+                return
+            }
+            self.ownerAvatarImageView.image = avatar
+        }
         presenter?.repoDetailFetched = { [unowned self] (repoDetail) in
             self.repoDetail = repoDetail
+            self.presenter?.getOwnerAvatar(path: repoDetail.owner.avatarUrl)
             self.setupView()
         }
     }
     
     fileprivate func setupView() {
-        ownerLoginLabel.text = repoDetail?.owner.login
+        ownerLoginLabel.text = "owner: \(repoDetail?.owner.login ?? "")"
         repoDescriptionLabel.text = repoDetail?.description
         forksCountLabel.text = "forks: \(repoDetail?.forksCount ?? 0)"
         stargazersCountLabel.text = "stargazers: \(repoDetail?.stargazersCount ?? 0)"

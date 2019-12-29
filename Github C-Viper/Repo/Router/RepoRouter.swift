@@ -13,7 +13,7 @@ class RepoRouter {
     
     class func createModule() -> RepoListViewController {
         guard let view = RepoRouter.mainstoryboard.instantiateViewController(withIdentifier: "RepoListViewController") as? RepoListViewController else {
-            // FATAL ERROR
+            // sıçış
             return RepoListViewController()
         }
         let presenter = RepoPresenter()

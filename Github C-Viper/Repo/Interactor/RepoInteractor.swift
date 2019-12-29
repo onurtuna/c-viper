@@ -12,6 +12,7 @@ class RepoInteractor {
     
     var reposFetched: ((Array<Repo>) -> Void)?
     var repoDetailFetched: ((RepoDetail) -> Void)?
+    var imageDownloaded: ((Data) -> Void)?
     
     func fetchRepos(page: Int) {
         getProvider(GithubRepo.self).request(.search(page: page), completion: { [unowned self] result in
@@ -41,6 +42,17 @@ class RepoInteractor {
                 } catch (let error) {
                     print(error)
                 }
+            case .failure(let error):
+                print(error)
+            }
+        })
+    }
+    
+    func downloadImage(path: String) {
+        getProvider(FileService.self).request(.download(url: path), completion: { [unowned self] (result) in
+            switch result {
+            case .success(let response):
+                self.imageDownloaded?(response.data)
             case .failure(let error):
                 print(error)
             }
