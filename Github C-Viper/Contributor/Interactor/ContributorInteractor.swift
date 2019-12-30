@@ -30,6 +30,23 @@ class ContributorInteractor {
         })
     }
     
+    func getDetail(of contributorPath: String) {
+        MoyaHelper.getProvider(GithubContributor.self).request(.detail(url: contributorPath), completion: { [unowned self] result in
+            switch result {
+            case .success(let response):
+                let decoder = JSONDecoder()
+                do {
+                    let contributorDetail = try decoder.decode(ContributorDetail.self, from: response.data)
+                    print(contributorDetail)
+                } catch (let error) {
+                    print(error)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        })
+    }
+    
     func downloadImage(path: String) {
         MoyaHelper.getProvider(FileService.self).request(.download(url: path), completion: { [unowned self] (result) in
             switch result {

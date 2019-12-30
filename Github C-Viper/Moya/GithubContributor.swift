@@ -11,27 +11,33 @@ import Moya
 public enum GithubContributor {
     
     case fetch(repoFullname: String)
+    case detail(url: String)
     
 }
 
 extension GithubContributor: TargetType {
   
     public var baseURL: URL {
-        return URL(string: "https://api.github.com")!
+        switch self {
+        case .detail(let url):
+            return URL(string: url)!
+        default:
+            return URL(string: "https://api.github.com")!
+        }
+        
     }
 
     public var path: String {
         switch self {
         case .fetch(let repoFullname):
             return "repos/\(repoFullname)/contributors"
+        case .detail:
+            return ""
         }
     }
 
     public var method: Moya.Method {
-        switch self {
-        case .fetch:
-            return .get
-        }
+        return .get
     }
 
     public var sampleData: Data {
@@ -39,10 +45,7 @@ extension GithubContributor: TargetType {
     }
 
     public var task: Task {
-        switch self {
-        case .fetch:
-            return .requestPlain
-        }
+        return .requestPlain
     }
 
     public var headers: [String: String]? {

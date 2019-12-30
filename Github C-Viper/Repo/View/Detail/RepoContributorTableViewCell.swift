@@ -13,33 +13,34 @@ class RepoContributorTableViewCell: UITableViewCell {
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var fullnameLabel: UILabel!
     
-    let cache = NSCache<NSString, UIImage>()
+    //let cache = NSCache<NSString, UIImage>()
     var presenter: RepoPresenter?
     var contributor: Contributor? {
         didSet {
             fullnameLabel.text = contributor?.name
-            guard let name = contributor?.name as NSString? else {
-                return
-            }
-            if let cached = cache.object(forKey: name) {
-                self.avatarImageView.image = cached
-            } else {
+//            guard let name = contributor?.name as NSString? else {
+//                return
+//            }
+//            if let cached = cache.object(forKey: name) {
+//                self.avatarImageView.image = cached
+//            } else {
                 presenter?.getContributorAvatar(path: contributor?.avatarUrl ?? "", imageDownloaded: { (data) in
                     guard let avatar = UIImage(data: data, scale: 1.0) else {
                         return
                     }
                     self.avatarImageView.image = avatar
-                    guard let name = self.contributor?.name as NSString? else {
-                        return
-                    }
-                    self.cache.setObject(avatar, forKey: name)
+//                    guard let name = self.contributor?.name as NSString? else {
+//                        return
+//                    }
+//                    self.cache.setObject(avatar, forKey: name)
                 })
-            }
+//            }
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        avatarImageView.image = nil
     }
     
 }

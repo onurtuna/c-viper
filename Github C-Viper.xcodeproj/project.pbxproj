@@ -37,6 +37,7 @@
 		2D8DAE2123B8F48F0031F340 /* ContributorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8DAE2023B8F48F0031F340 /* ContributorRouter.swift */; };
 		2D8DAE2423BA0C3A0031F340 /* GithubContributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8DAE2323BA0C3A0031F340 /* GithubContributor.swift */; };
 		2D8DAE2623BA0D7D0031F340 /* MoyaHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8DAE2523BA0D7D0031F340 /* MoyaHelper.swift */; };
+		2D8DAE2823BA781F0031F340 /* ContributorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8DAE2723BA781F0031F340 /* ContributorDetail.swift */; };
 		A43456637B0BA8A93022C904 /* Pods_Github_C_Viper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ECA285F5364FE777C4BB47F /* Pods_Github_C_Viper.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		2D8DAE2023B8F48F0031F340 /* ContributorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorRouter.swift; sourceTree = "<group>"; };
 		2D8DAE2323BA0C3A0031F340 /* GithubContributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubContributor.swift; sourceTree = "<group>"; };
 		2D8DAE2523BA0D7D0031F340 /* MoyaHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaHelper.swift; sourceTree = "<group>"; };
+		2D8DAE2723BA781F0031F340 /* ContributorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorDetail.swift; sourceTree = "<group>"; };
 		4B6CA800DBBDFAA6C8AD6544 /* Pods-Github C-Viper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github C-Viper.debug.xcconfig"; path = "Target Support Files/Pods-Github C-Viper/Pods-Github C-Viper.debug.xcconfig"; sourceTree = "<group>"; };
 		54B6C58E970EFCD3F44DA604 /* Pods-Github C-Viper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github C-Viper.release.xcconfig"; path = "Target Support Files/Pods-Github C-Viper/Pods-Github C-Viper.release.xcconfig"; sourceTree = "<group>"; };
 		7ECA285F5364FE777C4BB47F /* Pods_Github_C_Viper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Github_C_Viper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				2D8DAE1A23B8F45B0031F340 /* Contributor.swift */,
+				2D8DAE2723BA781F0031F340 /* ContributorDetail.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				2D8DAE1223B8AFBA0031F340 /* RepoContributorTableViewCell.swift in Sources */,
 				2D8DAE1723B8F4430031F340 /* ContributorInteractor.swift in Sources */,
 				2D8DAE2123B8F48F0031F340 /* ContributorRouter.swift in Sources */,
+				2D8DAE2823BA781F0031F340 /* ContributorDetail.swift in Sources */,
 				2D8DAE2623BA0D7D0031F340 /* MoyaHelper.swift in Sources */,
 				2D8DADF023B75B8F0031F340 /* RepoRouter.swift in Sources */,
 				2D8DAE1523B8B2990031F340 /* FileService.swift in Sources */,

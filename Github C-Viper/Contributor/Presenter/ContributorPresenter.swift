@@ -20,4 +20,9 @@ class ContributorPresenter {
     func fetchContributors(of repoFullname: String) {
         interactor?.fetchContributors(of: repoFullname)
     }
+    
+    func getDetail(of contributorUrl: String) {
+        interactor?.getDetail(of: contributorUrl)
+    }
+    
 }
