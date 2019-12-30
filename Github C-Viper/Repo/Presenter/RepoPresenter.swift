@@ -26,6 +26,7 @@ class RepoPresenter {
             interactor?.imageDownloaded = ownerAvatarDownloaded
         }
     }
+    private var contributorInteractor = ContributorInteractor()
     
     func startFetchingRepos(page: Int) {
         interactor?.fetchRepos(page: page)
@@ -37,6 +38,20 @@ class RepoPresenter {
     
     func getOwnerAvatar(path: String) {
         interactor?.downloadImage(path: path)
+    }
+    
+    func fetchContributors(of repoFullname: String, contributorsFetched: @escaping (Array<Contributor>) -> Void) {
+        contributorInteractor.contributorsFetched = { (contributors) in
+            contributorsFetched(contributors)
+        }
+        contributorInteractor.fetchContributors(of: repoFullname)
+    }
+    
+    func getContributorAvatar(path: String, imageDownloaded: @escaping (Data) -> Void) {
+        contributorInteractor.imageDownloaded = { (data) in
+            imageDownloaded(data)
+        }
+        contributorInteractor.downloadImage(path: path)
     }
     
 }

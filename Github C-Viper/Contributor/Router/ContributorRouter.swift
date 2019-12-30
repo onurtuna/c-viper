@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+class ContributorRouter {
+    
+    class func createModule() -> ContributorViewController {
+        let view = ContributorViewController()
+        let presenter = ContributorPresenter()
+        let interactor = ContributorInteractor()
+        
+        view.presenter = presenter
+        presenter.interactor = interactor
+        
+        return view
+    }
+    
+}

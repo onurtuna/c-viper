@@ -135,22 +135,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DA2B1751-6431-4C11-AA21-DE1D5E305632"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Github C-Viper/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "ViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F4664FFB-CEE7-4F49-AEAD-CECC21CE7C67"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -167,16 +151,272 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9224E889-58D0-4584-8EA6-DD48E6278BE7"
+            uuid = "6E1FC13A-FE5C-4480-AEAF-03EF0EE19EEE"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Github C-Viper/ViewController.swift"
+            filePath = "Github C-Viper/Contributor/Interactor/ContributorInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "fetchContributors(of:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6E1FC13A-FE5C-4480-AEAF-03EF0EE19EEE - caa5689a2de927af"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Github_C_Viper.ContributorInteractor.fetchContributors(of: Swift.String) -&gt; ()"
+                  moduleName = "Github C-Viper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/onurtuna/Documents/Projects/Github%20C-Viper/Github%20C-Viper/Contributor/Interactor/ContributorInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  uuid = "6E1FC13A-FE5C-4480-AEAF-03EF0EE19EEE - ce8e874e05483b0c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in Github_C_Viper.ContributorInteractor.fetchContributors(of: Swift.String) -&gt; ()"
+                  moduleName = "Github C-Viper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/onurtuna/Documents/Projects/Github%20C-Viper/Github%20C-Viper/Contributor/Interactor/ContributorInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "197">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AEB52916-450F-4E1E-BE6C-F409EB953B84"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Github C-Viper/Contributor/Interactor/ContributorInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "fetchContributors(of:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AEB52916-450F-4E1E-BE6C-F409EB953B84 - ce8e874e05483b0c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in Github_C_Viper.ContributorInteractor.fetchContributors(of: Swift.String) -&gt; ()"
+                  moduleName = "Github C-Viper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/onurtuna/Documents/Projects/Github%20C-Viper/Github%20C-Viper/Contributor/Interactor/ContributorInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "197">
+               </Location>
+               <Location
+                  uuid = "AEB52916-450F-4E1E-BE6C-F409EB953B84 - ce8e874e05483b0c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in Github_C_Viper.ContributorInteractor.fetchContributors(of: Swift.String) -&gt; ()"
+                  moduleName = "Github C-Viper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/onurtuna/Documents/Projects/Github%20C-Viper/Github%20C-Viper/Contributor/Interactor/ContributorInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "245">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C76F150-0C9B-4192-8EC3-5085BF098B91"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Github C-Viper/Contributor/Interactor/ContributorInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
             endingLineNumber = "20"
-            landmarkName = "viewDidAppear(_:)"
+            landmarkName = "fetchContributors(of:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58AB551D-148E-4FDF-AFDE-6C16320FA402"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Github C-Viper/Repo/View/Detail/RepoDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "fetchContributors()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "58AB551D-148E-4FDF-AFDE-6C16320FA402 - 9c0b34e0a2cc65a5"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Github_C_Viper.RepoDetailViewController.(fetchContributors in _AF297961FEF9E562E59B55F4F7B1A76A)() -&gt; ()"
+                  moduleName = "Github C-Viper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/onurtuna/Documents/Projects/Github%20C-Viper/Github%20C-Viper/Repo/View/Detail/RepoDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "58AB551D-148E-4FDF-AFDE-6C16320FA402 - b24bbfc46bde21fb"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Github_C_Viper.Contributor&gt;) -&gt; () in Github_C_Viper.RepoDetailViewController.(fetchContributors in _AF297961FEF9E562E59B55F4F7B1A76A)() -&gt; ()"
+                  moduleName = "Github C-Viper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/onurtuna/Documents/Projects/Github%20C-Viper/Github%20C-Viper/Repo/View/Detail/RepoDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B6BAB836-E0D9-47DE-A576-FAB28B299272"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Github C-Viper/Repo/Presenter/RepoPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "fetchContributors(of:contributorsFetched:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E1ABB9B8-4497-4BA5-95E3-7C15F8A04F4B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Github C-Viper/Repo/Presenter/RepoPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "fetchContributors(of:contributorsFetched:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E1ABB9B8-4497-4BA5-95E3-7C15F8A04F4B - 2a3c7e6927de7a5d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Github_C_Viper.RepoPresenter.fetchContributors(of: Swift.String, contributorsFetched: (Swift.Array&lt;Github_C_Viper.Contributor&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Github C-Viper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/onurtuna/Documents/Projects/Github%20C-Viper/Github%20C-Viper/Repo/Presenter/RepoPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "69">
+               </Location>
+               <Location
+                  uuid = "E1ABB9B8-4497-4BA5-95E3-7C15F8A04F4B - b877fdd3205dd1c8"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Github_C_Viper.Contributor&gt;) -&gt; () in Github_C_Viper.RepoPresenter.fetchContributors(of: Swift.String, contributorsFetched: (Swift.Array&lt;Github_C_Viper.Contributor&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Github C-Viper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/onurtuna/Documents/Projects/Github%20C-Viper/Github%20C-Viper/Repo/Presenter/RepoPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "41">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4BD6DBD-6BC9-47EC-B2FA-602E411654CE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Github C-Viper/Repo/Presenter/RepoPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "fetchContributors(of:contributorsFetched:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D8ABF1D3-0FFF-4E9B-9F66-41C2CD7BEF3D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Github C-Viper/Repo/View/Detail/RepoDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "fetchContributors()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A72C6C1-83B0-4A70-B402-A9FDD571AD60"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Github C-Viper/Repo/View/Detail/RepoDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "fetchContributors()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

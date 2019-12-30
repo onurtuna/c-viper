@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+class ContributorPresenter {
+    
+    var interactor: ContributorInteractor?
+    var contributorsFetched: ((Array<Contributor>) -> Void)? {
+        didSet {
+            interactor?.contributorsFetched = contributorsFetched
+        }
+    }
+    
+    func fetchContributors(of repoFullname: String) {
+        interactor?.fetchContributors(of: repoFullname)
+    }
+}

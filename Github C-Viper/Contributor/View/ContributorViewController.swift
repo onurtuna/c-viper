@@ -10,6 +10,8 @@ import UIKit
 
 class ContributorViewController: UIViewController {
 
+    var presenter: ContributorPresenter?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

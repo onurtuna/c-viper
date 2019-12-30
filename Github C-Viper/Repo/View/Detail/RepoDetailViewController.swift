@@ -21,6 +21,7 @@ final class RepoDetailViewController: UIViewController {
     private var presenter: RepoPresenter?
     private var repo: Repo?
     var repoDetail: RepoDetail?
+    private var contributors = Array<Contributor>()
     
     init(repo: Repo, presenter: RepoPresenter) {
         super.init(nibName: nil, bundle: nil)
@@ -36,6 +37,19 @@ final class RepoDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = repo?.name
+        registerTableItems()
+        setupClosures()
+        fetchContributors()
+    }
+    
+    fileprivate func setupView() {
+        ownerLoginLabel.text = "owner: \(repoDetail?.owner.login ?? "")"
+        repoDescriptionLabel.text = repoDetail?.description
+        forksCountLabel.text = "forks: \(repoDetail?.forksCount ?? 0)"
+        stargazersCountLabel.text = "stargazers: \(repoDetail?.stargazersCount ?? 0)"
+    }
+    
+    fileprivate func setupClosures() {
         presenter?.ownerAvatarDownloaded = { [unowned self] (response) in
             guard let avatar = UIImage(data: response, scale: 1.0) else {
                 return
@@ -49,11 +63,39 @@ final class RepoDetailViewController: UIViewController {
         }
     }
     
-    fileprivate func setupView() {
-        ownerLoginLabel.text = "owner: \(repoDetail?.owner.login ?? "")"
-        repoDescriptionLabel.text = repoDetail?.description
-        forksCountLabel.text = "forks: \(repoDetail?.forksCount ?? 0)"
-        stargazersCountLabel.text = "stargazers: \(repoDetail?.stargazersCount ?? 0)"
+    fileprivate func fetchContributors() {
+        presenter?.fetchContributors(of: repo?.fullname ?? "", contributorsFetched: { [unowned self] (contributors) in
+            self.contributors.removeAll()
+            self.contributors = contributors
+            self.contributorsTableView.reloadData()
+        })
+    }
+    
+    fileprivate func registerTableItems() {
+        contributorsTableView.dataSource = self
+        contributorsTableView.delegate = self
+        contributorsTableView.register(UINib(nibName: "RepoContributorTableViewCell", bundle: nil), forCellReuseIdentifier: "RepoContributorTableViewCell")
     }
 
+}
+
+extension RepoDetailViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return contributors.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RepoContributorTableViewCell") as? RepoContributorTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.presenter = presenter
+        cell.contributor = contributors[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
 }

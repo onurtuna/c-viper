@@ -15,7 +15,7 @@ class RepoInteractor {
     var imageDownloaded: ((Data) -> Void)?
     
     func fetchRepos(page: Int) {
-        getProvider(GithubRepo.self).request(.search(page: page), completion: { [unowned self] result in
+        MoyaHelper.getProvider(GithubRepo.self).request(.search(page: page), completion: { [unowned self] result in
             switch result {
                 case .success(let response):
                     let decoder = JSONDecoder()
@@ -32,7 +32,7 @@ class RepoInteractor {
     }
     
     func getDetail(of repoFullname: String) {
-        getProvider(GithubRepo.self).request(.detail(repoFullname: repoFullname), completion: { [unowned self] result in
+        MoyaHelper.getProvider(GithubRepo.self).request(.detail(repoFullname: repoFullname), completion: { [unowned self] result in
             switch result {
             case .success(let response):
                 let decoder = JSONDecoder()
@@ -49,7 +49,7 @@ class RepoInteractor {
     }
     
     func downloadImage(path: String) {
-        getProvider(FileService.self).request(.download(url: path), completion: { [unowned self] (result) in
+        MoyaHelper.getProvider(FileService.self).request(.download(url: path), completion: { [unowned self] (result) in
             switch result {
             case .success(let response):
                 self.imageDownloaded?(response.data)
@@ -57,11 +57,6 @@ class RepoInteractor {
                 print(error)
             }
         })
-    }
-    
-    fileprivate func getProvider<T>(_ input: T.Type) -> MoyaProvider<T> {
-        let provider = MoyaProvider<T>(plugins: [CompleteUrlLoggerPlugin()])
-        return provider
     }
     
 }
